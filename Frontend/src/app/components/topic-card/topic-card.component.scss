@@ -1,0 +1,42 @@
+.topic-card {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 3rem 0;
+}
+h4{
+    color: #00b0ff;
+}
+.topic-card:hover{
+
+    background-size: 100% 100%;
+    background-position-x: left;
+    background-color:#9ca8af3b;
+}
+
+ul {
+    list-style: none;
+}
+
+ul a {
+    color: #333;
+}
+
+ul .fa{
+    color: #00b0ff;
+}
+
+@media (max-width: 568px) {
+    .topic-card {
+        padding: 20px;
+    }
+    .topic-card:hover{
+        background-size: 100% 100%;
+        background-position-x: left;
+        background-color:#9ca8af86;
+    }
+    .quiz{
+        justify-content: center;
+    }
+}
+

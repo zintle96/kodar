@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<app-spacer></app-spacer>
+<section class="progress-card-wrapper">
+<div class="card progress-card shadow-lg">
+  <div class="progress-card-content">
+    <h2>Your Course Progress</h2>
+    <div class="container" *ngFor="let course of courses">
+      <div class="row">
+        <div class="col-sm-4 image">
+          <img src="{{ course.course_logo }}" alt="" />
+        </div>
+        <div id="container" >
+          <div id="progress" [ngStyle]="{'width': course.percentage + '%'}">
+          </div>
+        </div>
+        <div class="col-sm-4 percent">
+          <span class="font-weight-bold ">{{ course.percentage }}%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>

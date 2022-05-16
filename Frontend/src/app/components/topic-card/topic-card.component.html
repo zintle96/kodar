@@ -1,0 +1,27 @@
+<!-- <ngx-ui-loader></ngx-ui-loader> -->
+<div class="card topic-card shadow-lg">
+    <div class="topic-card-content">
+        <h4>{{ topic.topic_name }}</h4>
+        <p>{{ topic.topic_desc }}</p>
+        <ul>
+            <li *ngFor="let lesson of topic.lessons; index as i">
+                <a routerLink="/lesson/{{lesson.topic_id}}/{{lesson.lesson_id}}" class="font-weight-light">
+                   <i class="fas fa-book-open fa-beat-fade"></i>
+                   Lesson {{i + 1}}: {{ lesson.lesson_name }}
+                </a>
+            </li>
+            <li>
+
+              <i class="fa-solid fa-clipboard fa-shake" aria-hidden="true"></i>
+              <a routerLink="/instruction/{{ topic.course_name }}/{{topic.topic_id}}/{{contributionAmount}}" class="font-weight-light ml-2">Quiz</a>
+              
+                <span *ngIf="isQuizFinished(topic.topic_id)">
+                  <a class="fa fa-check-circle"></a>
+                </span>
+
+            </li>
+        </ul>
+    </div>
+
+</div>
+

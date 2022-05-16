@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<app-spacer></app-spacer>
+
+<section>
+    
+    <app-tabs [urls]="urls"></app-tabs>
+    <main>
+        <div id="topic-cards-wrapper">
+            <div *ngIf="!error; else contentNotFound">
+                <div *ngFor="let topic of topics">
+                 <app-topic-card [topic]="topic" [contributionAmount]="contributionAmount" [topicsDone]="topicDone"></app-topic-card>
+                </div>
+            </div>
+             <ng-template #contentNotFound>
+              <div id="notfound-wrapper">
+                 <img src="../../../assets/svg/404_Error_Page_not_Found_with_people_connecting_a_plug-amico.svg"> 
+              </div>
+             </ng-template>
+        </div>
+
+    </main>
+<ngx-ui-loader></ngx-ui-loader>
+</section>
+<app-scroll-to-top></app-scroll-to-top>

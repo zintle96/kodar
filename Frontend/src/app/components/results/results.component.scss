@@ -1,0 +1,30 @@
+.svg__results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+@media (max-width: 1000px) {
+  .svg__results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.button_restart{
+  border-radius: 2rem;
+  color: white;
+}
+
+.button_finish{
+  border-radius: 2rem;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .svg__image {
+    display: none;
+  }
+}

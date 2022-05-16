@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/bootstrap-icons/font/bootstrap-icons.scss';
+@font-face {
+  font-family: "Manrope", sans-serif;
+  src: url("./assets/fonts/Manrope/Manrope-VariableFont_wght.ttf");
+  src: url("./assets/fonts/Manrope/static/Manrope-Bold.ttf");
+  src: url("./assets/fonts/Manrope/static/Manrope-ExtraBold.ttf");
+  src: url("./assets/fonts/Manrope/static/Manrope-ExtraLight.ttf");
+  src: url("./assets/fonts/Manrope/static/Manrope-Light.ttf");
+  src: url("./assets/fonts/Manrope/static/Manrope-Medium.ttf");
+  src: url("./assets/fonts/Manrope/static/Manrope-Regular.ttf");
+  src: url("./assets/fonts/Manrope/static/Manrope-SemiBold.ttf");
+}
+
+:root {
+  //fonts
+  --font-family: "Manrope", sans-serif;
+
+  //colors
+  --bg-color: #f3f7f7;
+  --cl-danger: #f78e8e;
+  --cl-success: #5de4dd;
+  --cl-placeholder: #3a464b;
+  --black-text: #000000;
+  --cl-button: #00b0ff;
+  --cl-container: #9ca8af;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #F3F7F7;
+  font-family: 'Manrope', sans-serif;
+  // margin-top: 65px;
+}
+
+.pedding__section {
+  margin: 2rem;
+}

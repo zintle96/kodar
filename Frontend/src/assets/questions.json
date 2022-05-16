@@ -1,0 +1,158 @@
+{
+    "questions": [{
+            "questionText": "What does HTML stand for?",
+            "options": [{
+                    "text": "Hyper Text  Mark Up Language",
+                    "correct": true
+                },
+                {
+                    "text": "Home Tool  Make Up Language"
+                },
+                {
+                    "text": "Hyperlink and  Make Up Language"
+                },
+                {
+                    "text": "Hot Mail"
+                }
+            ]
+        },
+        {
+            "questionText": " How many tags are in a regular element?",
+            "options": [{
+                    "text": "4"
+                },
+                {
+                    "text": "3"
+                },
+                {
+                    "text": "8"
+                },
+                {
+                    "text": "2",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionText": "<body> Is this an opening tag or a closing tag?",
+            "options": [{
+                    "text": "Closing"
+                },
+                {
+                    "text": "Opening",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionText": " What is an element that does not have a closing tag called?",
+            "options": [{
+                    "text": "Tag"
+                },
+                {
+                    "text": "Empty element",
+                    "correct": true
+                },
+                {
+                    "text": "Closed element"
+                }
+            ]
+        },
+        {
+            "questionText": " Which of the following is an example of an empty element?",
+            "options": [{
+                    "text": "<img/ >",
+                    "correct": true
+                },
+                {
+                    "text": "<img></body>"
+                },
+                {
+                    "text": "</img>"
+                }
+            ]
+        },
+        {
+            "questionText": "DOM stands for?",
+            "options": [{
+                    "text": "Document object model",
+                    "correct": true
+                },
+                {
+                    "text": "Document Oriented model"
+                },
+                {
+                    "text": "Data object model"
+                },
+                {
+                    "text": "Data oriented model"
+                }
+            ]
+        },
+        {
+            "questionText": " The __________ is an instruction to the web browser about what version of HTML the page is written in?",
+            "options": [{
+                    "text": "<!TYPE>"
+                },
+                {
+                    "text": " <!DOCTYPE>",
+                    "correct": true
+                },
+                {
+                    "text": "<TYPE>"
+                },
+                {
+                    "text": "<DOCTYPE>"
+                }
+            ]
+        },
+        {
+            "questionText": "What are <div> tags used for?",
+            "options": [{
+                    "text": "To provide space between tables"
+                },
+                {
+                    "text": "To logically divide the document",
+                    "correct": true
+                },
+                {
+                    "text": "To logically divide the paragraphs"
+                },
+                {
+                    "text": "To replace paragraphs. i.e. p tags"
+                }
+            ]
+        },
+        {
+            "questionText": "How can we resize the image?",
+            "options": [{
+                    "text": "Using rs attribute"
+                },
+                {
+                    "text": "Using size attribute"
+                },
+                {
+                    "text": "Using height and width",
+                    "correct": true
+                },
+                {
+                    "text": "Using resize attribute"
+                }
+            ]
+        },
+        {
+          "questionText": "Can I play audios in HTML?",
+          "options": [{
+                  "text": "No"
+              },
+
+              {
+                  "text": "Yes",
+                  "correct": true
+              }
+          ]
+      }
+
+    ]
+}
+

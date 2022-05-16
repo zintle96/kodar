@@ -1,0 +1,45 @@
+<!-- navbar -->
+<app-navbar></app-navbar>
+<ngx-ui-loader></ngx-ui-loader>
+//spacer between the navbar and content
+<div class="bg-danger w-100 spacer" style="margin-top: 65px;"></div>
+
+<div class="row content">
+  <!-- Left content -->
+  <div class="col-lg-5">
+    <h1>Select course</h1>
+    <p class="content_text">
+      The following technologies are necessary for you to start learning how to code
+    </p>
+    <p class="course__paced">Self-Paced Courses:</p>
+    <div>
+      <div class="row card__container">
+
+        <!-- <ngx-ui-loader [loaderId]="'loader-01'"> </ngx-ui-loader> -->
+        
+                <div class="col-sm-6 col-md-6" *ngFor="let course of courses">
+                  
+                    <app-course-card
+                      [course]="course"
+                      (click)="viewOverview(course.course_name)"
+                    ></app-course-card>
+                
+                </div>
+         
+                {{myMsisdn}}
+      </div>
+    </div>
+  </div>
+  <!-- Right content -->
+  <div class="col-lg-7 d-md-none d-lg-block image__wrapper">
+    <div class="svg__image">
+      <img
+        src="../../../assets/svg/dashboard.svg"
+        alt="home_page"
+        class="position-fixed"
+      />
+
+      {{myMsisdn }}
+    </div>
+  </div>
+</div>

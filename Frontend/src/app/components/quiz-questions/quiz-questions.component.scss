@@ -1,0 +1,53 @@
+.card{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+
+}
+li{
+    list-style: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+li .card:hover{
+    border: 1px solid #00b0ff;
+    background: #00b0ff;
+    color: white;
+}
+ol{
+    padding: 0;
+}
+.options{
+
+  .card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+}
+
+.button_restart{
+  border-radius: 2rem;
+}
+.button_finish{
+  border-radius: 2rem;
+}
+
+app-back-button {
+  margin-left: 32px;
+}
+
+#notfound-wrapper{
+  display:flex;
+  justify-content: center;
+}
+
+img {
+  max-height: 60vh;
+
+}
+@media(min-width:770px){
+  .card_quiz{
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+  }
+}

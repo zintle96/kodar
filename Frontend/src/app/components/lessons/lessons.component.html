@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<app-spacer></app-spacer>
+
+<app-back-button></app-back-button>
+
+<div class="pedding__section">
+  <div class="lesson__content">
+    <div *ngIf="!error; else contentNotFound">
+      
+      <div class="inside__content" *ngFor="let lesson of lessonContents; index as i">
+
+        <div *ngIf="lesson.heading;">
+            <h2>{{ lesson.heading }}</h2>
+        </div>
+
+        <div class="paragraph__container" *ngIf="lesson.content.length > 0">
+              <div *ngFor="let content of lesson.content" class="mb-3">
+                  <p>{{ content }}</p>
+              </div>
+        </div>
+
+      </div>
+    </div>
+    <ng-template #contentNotFound>
+      <div id="notfound-wrapper">
+        <img src="../../../assets/svg/404_Error_Page_not_Found_with_people_connecting_a_plug-amico.svg"> 
+      </div>
+    </ng-template>
+
+  </div>
+
+  <div class="lesson__example" *ngIf="lessonExamples.length > 0">
+    <div class="lesson__example__card" *ngFor="let currentExample of lessonExamples">
+      <h5>{{ currentExample.example_desc }}</h5>
+      <div style="word-break: break-all" class="lesson__example__card__content" *ngFor="let exampleElement of currentExample.example">
+        <p style="word-break: break-all">{{ exampleElement }}</p>
+      </div>
+
+      <div class="open__code">
+        <a style="word-break: break-all" (click)="openCodeEditor(currentExample.example_desc)">Open Code Editor</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="second__section" *ngIf="moreInfo">
+    <h2>More Information</h2>
+    <div class="content__section">
+      <p style="word-break: break-all">{{ moreInfo }}</p>
+    </div>
+  </div>
+
+</div>
+<app-scroll-to-top></app-scroll-to-top>
+<ngx-ui-loader></ngx-ui-loader>

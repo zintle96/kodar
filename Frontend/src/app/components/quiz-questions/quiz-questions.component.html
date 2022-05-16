@@ -1,0 +1,110 @@
+<app-navbar></app-navbar>
+
+<div class="bg-danger w-100 spacer" style="margin-top: 65px"></div>
+
+<app-back-button></app-back-button>
+<ngx-ui-loader></ngx-ui-loader>
+<div class="container">
+  <div *ngIf="!error; else contentNotFound">
+  <div class="card card_quiz " *ngIf="quizes[0] != undefined || quizes[0] != null">
+    <ng-container *ngIf="!isQuizComplted">
+      <div class="justify-content-between d-flex p-2">
+        <div class="image">
+          <!-- {{ quizes[0].course_logo }} -->
+          <img src="{{ quizes[0].course_logo }}" alt="" />
+        </div>
+        <div class="quiz-header">
+          <h4 style="font-style: italic">{{ quizes[0].topic_name }} Quiz</h4>
+        </div>
+      </div>
+      <div class="d-flex justify-content-around py-3">
+        <div class="score">
+          <h5>{{ points }} points</h5>
+        </div>
+        <div class="question-remain">
+          <span style="font-style: italic"
+            >Question {{ currentQuestion + 1 }} of
+            {{ quizes.length }}</span
+          >
+        </div>
+        <!-- <div class="timer">
+
+          <h5>{{ counter }} Sec</h5>
+        </div> -->
+      </div>
+      <div class="questions">
+        <div class="card px-2">
+          <h3>{{ quizes[currentQuestion]?.question_text }}</h3>
+        </div>
+      </div>
+      <div class="options px-4">
+        <ol *ngFor="let option of quizes[currentQuestion]?.answer_options">
+          <li (click)="answer(currentQuestion + 1, option)">
+            <div  class="card">
+              {{ option.text }}
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="d-flex justify-content-between">
+        <button
+          disabled
+          class="btn"
+          (click)="previousQuestion()"
+        >
+          <i class="fa-solid text-primary fa-3x fa-chevron-left"></i>
+        </button>
+        <!-- <button
+          [disabled]="currentQuestion === 0"
+          class="btn"
+          (click)="resetQuiz()"
+        >
+          <i class="fa-solid text-primary fa-3x fa-arrows-rotate"></i>
+        </button> -->
+        <button class="btn" [disabled]="this.disable" (click)="nextQuestion()">
+          <i class="fa-solid text-primary fa-3x fa-chevron-right"></i>
+        </button>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="isQuizComplted">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 svg__results">
+            <img
+              src="../../../assets/svg/Achievement-bro 1.svg"
+              width="100%"
+              alt=""
+              class="svg__image"
+            />
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 text-center results__info">
+            <h3>
+              Congratulation!!!<br />You have completed the quiz<br />View your results
+              below
+            </h3>
+            <p>Attempted Questions:{{ quizes.length }}</p>
+            <p>Correct answers: {{ correctAnswer }}</p>
+            <p>Incorrect answers: {{ incorrectAnswer }}</p>
+            <h4>Total Score: {{ process }}%</h4>
+            <div class="d-flex justify-content-between py-3">
+              <button type="button" class="btn btn-warning button_restart" (click)="restartQuiz()">
+                Restart quiz
+              </button>
+              <!-- <button type="button" class="btn btn-outline-secondary">
+                View questions
+              </button> -->
+              <button type="button" class="btn btn-info button_finish " (click)="finishQuiz()">Finish</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  </div>
+  <ng-template #contentNotFound>
+    <div id="notfound-wrapper">
+      <img src="../../../assets/svg/404_Error_Page_not_Found_with_people_connecting_a_plug-amico.svg"> 
+    </div>
+  </ng-template>
+</div>

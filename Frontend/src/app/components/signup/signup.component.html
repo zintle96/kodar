@@ -1,0 +1,78 @@
+<ngx-ui-loader></ngx-ui-loader>
+<div class="content__container pedding__section">
+    <div class="image__wrapper">
+        <div class="image__container">
+            <img src="../../assets/svg/signup.svg" alt="login-image">
+        </div>
+    </div>
+    <div class="content__wrapper">
+        <div class="logo__section">
+            <img src="../../assets/svg/logo.svg" alt="logo-image" (click)="gotoLandingpage()">
+        </div>
+        <div class="active__tab">
+            <h4 class="not__active" (click)="gotoSignin()">Sign in</h4>
+            <h4 class="active__current">Sign up</h4>
+        </div>
+
+        <div *ngIf="errorMsg != '' " class="danger__text">
+            <p class="danger__message">{{ errorMsg }}</p>
+        </div>
+
+        <form class="form__group" [formGroup]="signUpForm" (submit)="onSubmit()">
+        <div class="input__section">
+            <div class="input__group">
+                <i class="fa fa-user"></i>
+                <!-- <input type="text" placeholder="Enter mobile phone number"> -->
+                <input type="text" id="number" class="input-phone input-text" formControlName="phone_number" name="phone_number" placeholder="Enter mobile number" autocomplete="off">
+            </div>
+            <div class="danger__section">
+                <p *ngIf="signUpForm.get('phone_number')?.errors?.['minlength']  && (signUpForm.get('phone_number')?.touched || signUpForm.get('phone_number')?.dirty)">
+                    <span>Phone Number must be at least 10 digits</span>
+                </p>
+
+                <p *ngIf="(signUpForm.get('phone_number')?.touched || signUpForm.get('phone_number')?.dirty) && signUpForm.get('phone_number')?.errors?.['required']">
+                    <span>Phone Number is Required</span>
+                </p>
+            </div>
+
+            <div class="input__group">
+                <i class="fa fa-unlock" aria-hidden="true"></i>
+                <!-- <input type="text" placeholder="Enter your password"> -->
+                <input [type]="password1Shown ? 'text' : 'password'" id="password" class="input-text " formControlName="password" name="password" placeholder="Create Password">
+
+                 <!-- showpassword -->
+                 <i  *ngIf="!password1Shown" class="bie bi-eye-slash" (click)="togglePassword(1)"></i>
+                 <i  *ngIf="password1Shown" class="bie bi-eye" (click)="togglePassword(1)"></i>
+            </div>
+
+            <div class="danger__section" *ngIf="(signUpForm.get('password')?.touched || signUpForm.get('password')?.dirty) && signUpForm.get('password')?.errors?.['minlength']  ">
+                <p class="errors">Password must be at least 8 characters</p>
+            </div>
+            <div class="danger__section" *ngIf="(signUpForm.get('password')?.touched || signUpForm.get('password')?.dirty) && signUpForm.get('password')?.errors?.['required']">
+                <p class="errors">Password is Required</p>
+            </div>
+
+            <div class="input__group">
+                <i class="fa fa-unlock" aria-hidden="true"></i>
+                <!-- <input type="text" placeholder="Confirm your password"> -->
+                <input [type]="password2Shown ? 'text' : 'password'" id="confirm_password" class="input-text" formControlName="confirm_password" name="confirm_password" placeholder="Confirm Password">
+                        <i  *ngIf="!password2Shown" class="bie bi-eye-slash" (click)="togglePassword(2)"></i>
+                        <i  *ngIf="password2Shown" class="bie bi-eye" (click)="togglePassword(2)"></i>
+            </div>
+
+            <div class="danger__section" *ngIf="(signUpForm.get('confirm_password')?.touched || signUpForm.get('confirm_password')?.dirty) && signUpForm.get('confirm_password')?.errors?.['required'] ">
+                <p class="errors">Password is Required</p>
+            </div>
+
+            <div class="danger__section" *ngIf="(signUpForm.get('confirm_password')?.touched || signUpForm.get('confirm_password')?.dirty) && signUpForm.get('confirm_password')?.errors?.['confirmPasswordMatch']">
+                <p class="errors">The Two Passwords Do Not Match</p>
+            </div>
+        </div>
+
+        <div class="button__section">
+            <button type="submit" [disabled]="signUpForm.invalid" (click)="onSubmit()">sign up</button>
+        </div>
+        <p>Already have an account? <a routerLink="/signin">Sign in</a></p>
+    </form>
+    </div>
+</div>

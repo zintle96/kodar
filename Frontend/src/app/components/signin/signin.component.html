@@ -1,0 +1,82 @@
+<ngx-ui-loader></ngx-ui-loader>
+<div class="content__container pedding__section">
+  <div class="image__wrapper">
+    <div class="image__container">
+      <img src="../../assets/svg/signin.svg" alt="login-image" />
+    </div>
+  </div>
+  <div class="content__wrapper">
+      <div class="logo__section">
+          <img src="../../assets/svg/logo.svg" alt="logo-image" (click)="gotoLandingPage()">
+      </div>
+      <div class="active__tab">
+          <h4 class="active__current">Sign in</h4>
+          <h4 class="not__active" (click)="gotoSignup()">Sign up</h4>
+      </div>
+
+    <div class="danger__text" *ngIf="error != ''">
+       <!-- && error != 'getaddrinfo ENOTFOUND ec2-52-201-124-168.compute-1.amazonaws.com';else amazonConnectionError "> -->
+      <p>{{ error }}</p>
+    </div>
+
+    <!-- <ng-template #amazonConnectionError>
+      <p class="error"> Sorry server is currently down</p>
+    </ng-template> -->
+
+    <form class="form__group" [formGroup]="formValue">
+      <div class="input__section">
+        <div class="input__group">
+          <i class="fa fa-user"></i>
+          <input
+            type="text"
+            id="number"
+            class="input-text"
+            formControlName="phone_number"
+            name="number"
+            placeholder="Enter mobile phone number"
+          />
+          <!-- <input type="text" placeholder="Enter mobile phone number"> -->
+        </div>
+
+        <div class="input__group">
+          <i class="fa fa-unlock" aria-hidden="true"></i>
+          <!-- <input type="text" placeholder="Enter your password" formControlName="phone_number" name="number"> -->
+          <input
+            [type]="password1Shown ? 'text' : 'password'"
+            id="password"
+            formControlName="password"
+            name="password"
+            placeholder="Enter your password"
+          />
+
+          <!-- show password -->
+          <i
+            *ngIf="!password1Shown"
+            class="bie bi-eye-slash"
+            (click)="togglePassword(1)"
+          ></i>
+          <i
+            *ngIf="password1Shown"
+            class="bie bi-eye"
+            (click)="togglePassword(1)"
+          ></i>
+        </div>
+      </div>
+
+      <div class="forgot__section">
+        <div class="remember__me">
+          <input type="checkbox" />
+          <label>Remember Me</label>
+        </div>
+        <p>Forgot Password?</p>
+      </div>
+
+      <div class="button__section">
+        <button type="submit" [disabled]="formValue.invalid" (click)="signIn()">
+          sign in
+        </button>
+      </div>
+      <p>New on our platform? <a routerLink="/signup">Create an account</a></p>
+    </form>
+  </div>
+</div>

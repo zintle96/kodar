@@ -1,0 +1,44 @@
+main {
+    width: 100%;
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#topic-cards-wrapper {
+    // width: 90%;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.challenge-card {
+    width: 90%;
+    padding: 30px;
+    text-align: center;
+}
+
+app-back-button  {
+    margin-left: -40px;
+}
+
+#notfound-wrapper{
+    display:flex;
+    justify-content: center;
+}
+  
+img{
+    max-height: 60vh;
+  
+}
+
+@media (max-width: 400px) {
+    app-back-button {
+        // margin-left: -15px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+}
+

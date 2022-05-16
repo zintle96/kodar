@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+
+<!-- <div class="bg-danger w-100 spacer" style="margin-top: 65px"></div> -->
+<app-spacer></app-spacer>
+<div class="bg-danger w-100 spacer" style="margin-top: 65px"></div>
+
+<app-back-button></app-back-button>
+<ngx-ui-loader></ngx-ui-loader>
+
+
+<section *ngIf="!error; else contentNotFound">
+
+  <div class="container bg-light ">
+    <div class="row instruction_content">
+      <div class="col-lg-6 col-md-6 col-sm-12 py-5 ">
+        <div *ngIf="quiz != undefined || quiz != null">
+          <h3>Welcome to {{ quiz[0].topic_name }} Quiz</h3>
+        </div>
+        <p>This quiz contain {{  numberOfQuizQuestions }} questions.Each questions hold 1 points</p>
+        <h4>Instructions:</h4>
+        <ol class="px-5">
+          <li>Correct question gives you 1 points</li>
+          <li>Once the quiz start you can not move back to the previous question</li>
+        </ol>
+        <h1 class="all_the_best" style="font-family: cursive">All the best!!!</h1>
+        <div
+          style="align-content: center; display: flex; justify-content: center"
+        >
+          <button
+            id="btn_start"
+            class="btn btn-lg"
+            (click)="goToQuiz()"
+          >
+            Start quiz
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-0 py-4 svg__instruction">
+        <img src="../../../assets/svg/quiz.svg" width="100%" alt="" />
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<ng-template #contentNotFound>
+    
+  <div id="notfound-wrapper">
+    <img src="../../../assets/svg/404_Error_Page_not_Found_with_people_connecting_a_plug-amico.svg" class="img" />
+  </div>
+
+</ng-template>
+
+

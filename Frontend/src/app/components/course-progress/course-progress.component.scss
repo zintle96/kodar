@@ -1,0 +1,43 @@
+.progress-card-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-card {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  border-radius: 10px;
+  margin: 3rem 0;
+}
+
+.container .row {
+  margin: 50px auto;
+}
+
+.row .percent {
+  margin-left:93%;
+  margin-top: -20px;
+  position:sticky;
+}
+#progress {
+  border-radius: 10px;
+  background-color: blue;
+  height: 100%;
+}
+#container {
+  margin-top: 30px;
+  width: 300px;
+  height: 14px;
+  border-radius: 10px;
+  background-color: rgb(214, 214, 214);
+}
+
+
+app-back-button {
+  margin-left: 35px;
+}

@@ -1,0 +1,26 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {box-sizing: inherit;}
+
+
+.box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+#item1 {
+    background-color: teal;
+}
+
+#item2 {
+    background-color: blue;
+    /*margin-left: 130px;*/
+}
+
+#item3 {
+    background-color: red;
+    /*margin-left: 250px;*/
+}

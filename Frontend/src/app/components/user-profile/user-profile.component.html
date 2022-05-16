@@ -1,0 +1,65 @@
+
+  <div class="container mt-4" id="SigninPage-wrapper">
+
+    <div class="d-print-block">
+
+    <div class="contact-form row">
+
+      <div class="col-lg-6" id="svg_content">
+      <img src="assets/svg/Rectangle-1.svg" class="svg img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+    </div>
+
+    <div class="signin-form col-lg-6 mt-5 ">
+
+      <div class="logo text-center">
+      <img src="assets/svg/person-profile.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+
+    </div>
+
+    <h4>Information</h4>
+      <div class="form-group" [formGroup]="formValue">
+
+        <div class="input-group">
+
+          <label for="number" class="label"></label>
+
+        <!-- <input type="text" id="number" class="input-text" formControlName="phone_number" name="number" placeholder="Enter mobile number"> -->
+        <!-- <i class="fa-regular fa-user"></i> -->
+        <h5 >{{ userNumber }}</h5>
+        </div>
+
+        <div class="input-group">
+          <label for="password" class="label"></label>
+      <input type="password" id="password" class="input-text" formControlName="password" name="password" placeholder="Enter Password">
+
+      <i class="fa fa-lock" aria-hidden="true"></i>
+    </div>
+
+    <h4 class="mt-4">Update Details</h4>
+    <div class="input-group">
+
+      <label for="number" class="label"></label>
+
+    <input type="text" id="update_number" class="input-text" formControlName="update_number" name="number" placeholder="Change Password">
+    <i class="fa-regular fa-user"></i>
+
+    </div>
+
+    <div class="input-group">
+      <label for="password" class="label"></label>
+  <input type="password" id="update_password" class="input-text" formControlName="update_password" name="password" placeholder="Confirm Password">
+
+  <i class="fa fa-lock" aria-hidden="true"></i>
+</div>
+
+      <button type="button" class="btn btn-outline-primary hover mt-3" id="btn-learn" (click)="update()">
+        Save
+      </button>
+
+    </div>
+
+    </div>
+
+    </div>
+  </div>
+  </div>

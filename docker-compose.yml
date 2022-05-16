@@ -1,0 +1,20 @@
+version: '3'
+services:
+  # node 
+  nodejs-server:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "4318:4318"
+    container_name: node-api
+    image: registry.thedigitalacademy.co.za/fs/koder-api:0.0.1
+  # Angular  
+  angular-ui:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "4317:4317"
+    container_name: angular-ui
+    image: registry.thedigitalacademy.co.za/fs/koder:0.0.1

@@ -1,0 +1,64 @@
+// .btn {
+//   height: 50px;
+//   width: 130px;
+//   color: #9ca8af;
+//   padding: 10px;
+//   border-radius: 10px;
+//   -moz-border-radius: 10px;
+//   -webkit-border-radius: 10px;
+//   margin: 10px;
+// }
+
+#btn_start{
+  background:#00B0FF;
+  color: white;
+  border-radius: 13px;
+
+  :hover{
+    background: none;
+    border-color: #00B0FF ;
+    color: black;
+  }
+}
+
+app-back-button {
+  margin-left: 32px;
+}
+
+
+#notfound-wrapper{
+  display:flex;
+  justify-content: center;
+}
+
+.img {
+  max-height: 60vh;
+
+}
+
+@media(max-width:1000px){
+  .svg__instruction{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media(max-width:770px){
+  .svg__instruction{
+    display: none;
+  }
+}
+
+@media(min-width:770px){
+  .instruction_content{
+    // background: red;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
+    border-radius: 25px;
+  }
+}
+.all_the_best{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

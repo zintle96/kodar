@@ -1,0 +1,12 @@
+app-back-button  {
+    margin-left: -70px;
+}
+
+@media (max-width: 400px) {
+    app-back-button {
+        // margin-left: -200px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+}

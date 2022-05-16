@@ -1,0 +1,60 @@
+<div id="landing-page-wrapper">
+  <nav class="navbar navbar-expand-sm navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../../../assets/svg/logo.svg" alt="" />
+      </a>
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
+        <button class="btn btn-outline text-hover" routerLink="/signin">Login</button>
+        <button class="btn btn-outline hover" id="btn-boarder"routerLink="/signup">Sign Up</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- START HERO SECTION OF THE LANDING PAGE  -->
+
+  <section class="container-fluid" id="hero-section">
+    <div class="row" style="padding-top: 4%">
+
+      <div class="col-sm-12 col-md-6 col-lg-4" id="hero-content" style="padding-left: 4%">
+        <h1 class="text_color">The best platform <br />to learn to code</h1>
+        <p class="text__tailored" style="font-weight: bold; font-size: 2rem; padding-top: 4%">
+          Tailored to you {{this.getMsisdn()}}
+        </p>
+        <p style="font-size: 3vh"> 
+          No matter your experience level, <br />you'll be writing real,
+          functional code <br />within minutes of starting your first course.
+        </p>
+        <div id="btn-learn">
+          <button type="button" class="btn btn-outline-primary hover button__learn" id="btn-learn" (click)="redirect()">
+            
+            Start Learning
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-8 " id="hero-img-wrapper">
+        <img
+          src="../../../assets/svg/landing_page.svg"
+          alt=""
+          id="landing-page-img"
+        />
+      </div>
+    </div>
+
+  </section>
+
+<!-- END HERO SECTION OF THE LANDING PAGE  -->
+</div>

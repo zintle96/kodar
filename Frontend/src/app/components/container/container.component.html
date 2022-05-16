@@ -1,0 +1,28 @@
+<div class="course__container">
+  <div *ngIf="!error; else contentNotFound">
+    <img src="../../../assets/svg/course.svg" class='course_img' alt="course__image" />
+    
+    <div class="course__content" *ngFor="let topic of topics">
+      <h2>Why Learn {{topic.course_name}}?</h2>
+      <p>{{topic.overview_desc}}</p>
+      <h2>Take-away skills:</h2>
+    
+      <p>{{topic.overview_about}}</p>
+
+      <div *ngIf="topic.overview_prereq">
+        <h2>Note on Prerequisites:</h2>
+        <p>{{topic.overview_prereq}}</p>
+      </div>
+    
+    </div>
+  </div>
+
+  <ng-template #contentNotFound>
+    <div id="notfound-wrapper">
+       <img class="img1" src="../../../assets/svg/404_Error_Page_not_Found_with_people_connecting_a_plug-amico.svg"> 
+    </div>
+  </ng-template>
+
+</div>
+
+<ngx-ui-loader></ngx-ui-loader>

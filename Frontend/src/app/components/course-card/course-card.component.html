@@ -1,0 +1,17 @@
+
+<div ngxUiLoaderBlurred [loaderId]="'loader-01'" >
+  <!-- <ngx-ui-loader></ngx-ui-loader> -->
+  <div class="card mt-4 course__card" >
+
+    <div class="card-body" >
+      <h5 class="course__header">Course</h5>
+      <h5 class="card-title" >Learn {{ course.course_name }}</h5>
+      <h5 class="course__header">{{ course.lessonsCount == 1 ? course.lessonsCount + " Topic" : course.lessonsCount + " Topics" }}</h5>
+      <div class="course__image">
+        <img src="{{ course.course_logo }}" alt="" />
+
+      </div>
+    </div>
+
+  </div>
+</div>
